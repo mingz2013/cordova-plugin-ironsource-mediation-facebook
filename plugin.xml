@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ironsource-mediation-facebook" version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <name>cordova-plugin-ironsource-mediation-facebook</name>
+    <description>Cordova plugin for IronSource Ads</description>
+
+    <engines>
+        <engine name="cordova" version=">=6.3.0"/>
+        <engine name="cordova-android" version=">=4.0.0"/>
+        <engine name="cordova-ios" version=">=4.3.0"/>
+    </engines>
+
+
+    <dependency id="cordova-plugin-ironsource" url="https://github.com/mingz2013/cordova-plugin-ironsource"/>
+
+
+    <platform name="android">
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET"/>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+                    android:name="com.facebook.ads.AudienceNetworkActivity"
+                    android:hardwareAccelerated="true"
+                    android:configChanges="keyboardHidden|orientation|screenSize"/>
+        </config-file>
+
+        <framework src="src/android/ironsource-plugin-facebook.gradle" custom="true" type="gradleReference"/>
+
+    </platform>
+
+    <platform name="ios">
+
+        <framework src="IronSourceSDK" type="podspec" spec="~> 6.8.0.0"/>
+        <framework src="IronSourceFacebookAdapter" type="podspec" spec="~> 4.3.1.1"/>
+
+    </platform>
+</plugin>

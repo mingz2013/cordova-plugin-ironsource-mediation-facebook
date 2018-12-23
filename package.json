@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-ironsource-mediation-facebook",
+  "version": "0.0.1",
+  "description": "Ironsource ads for cordova based development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mingz2013/cordova-plugin-ironsource-mediation-facebook.git"
+  },
+  "keywords": [
+    "cordova",
+    "ironsource"
+  ],
+  "author": "mingz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mingz2013/cordova-plugin-ironsource-mediation-facebook/issues"
+  },
+  "homepage": "https://github.com/mingz2013/cordova-plugin-ironsource-mediation-facebook"
+}
